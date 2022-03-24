@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Xotic PC", ".", "{AF0922D4-A578-493C-8331-D10B0F656E42}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51933"
+		Debug.AspNetCompiler.PhysicalPath = "..\Xotic PC\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51933\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51933"
+		Release.AspNetCompiler.PhysicalPath = "..\Xotic PC\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51933\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51933"
+		SlnRelativePath = "..\Xotic PC\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF0922D4-A578-493C-8331-D10B0F656E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF0922D4-A578-493C-8331-D10B0F656E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68775FE1-055F-47AE-84EE-7C3C651CA06E}
+	EndGlobalSection
+EndGlobal

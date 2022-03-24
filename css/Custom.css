@@ -1,0 +1,106 @@
+﻿
+
+
+.probrand{
+    font-size:15px;
+    font-weight:600;
+    line-height:15px;
+    text-transform:uppercase;
+    font-family:sans-serif;
+}
+
+.proName{
+
+    font-size:13px;
+    line-height:17px;
+    font-family:sans-serif;
+    
+}
+
+.proNameView {
+    font-size: 20px;
+    line-height: 25px;
+    font-family: sans-serif;
+    color: #696e80
+}
+
+.proPrice {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    font-family: sans-serif;
+    margin-top: 10px
+
+}
+
+.divDet1{
+    border-bottom: 1px dashed  #ff6a00;
+    margin-bottom: 20px;
+}
+
+.proPriceView {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 17px;
+    font-family: sans-serif;
+}
+
+
+.proOgPrice {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    font-family: sans-serif;
+    text-decoration:line-through;
+    color:gray;
+}
+
+.proOgPriceView {
+    font-size: 15px;
+    font-weight: 400;
+    
+    font-family: sans-serif;
+    text-decoration: line-through;
+    color: gray;
+}
+
+.proPriceDiscount {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: red;
+}
+
+.proPriceDiscountView {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: red;
+}
+
+.h5size{
+    font-weight: 600;
+}
+
+.mainButton{
+
+    border-radius: 3px;
+    outline:0;
+    margin-top:10px;
+    min-height:22px;
+    font-size:13px;
+    font-weight:500;
+    min-width:108px;
+    background-color:#FF5722;
+    color:#fff;
+    border: 1px solid #FF5722;
+
+}
+
+
+.body{
+
+    background-color:black;
+    color:white;
+
+}

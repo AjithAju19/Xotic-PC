@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href ="css/Custom.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+     <form id="form1" runat="server">
+    
+    <div>
+               <div class ="navbar navbar-default navbar-fixed-top" role ="navigation">
+
+                <div class ="container">
+                    <div class = "navbar-header">
+                        
+
+                            <span class ="sr-only"></span>
+                            <span class =" icon-bar"></span>
+                            <span class =" icon-bar"></span>
+                            <span class =" icon-bar"></span>
+
+                        
+                        <a class =" navbar-brand" href="#"><span> <img src ="icons/xoticpc_logo.jpg" alt ="Xotic PC logo" height ="70" width ="120"/></span> </a>
+
+                    </div>  
+
+                    <div class ="navbar-collapse collapse">
+                        <ul class =" nav navbar-nav navbar-right">
+                            <li class =""><a href ="Home.aspx">Home</a></li>
+                             <li class =""><a href ="#">About</a></li>
+                             <li class =""><a href ="#">Contact us</a></li>
+                            <li class =""><a href ="#">Blog-</a></li>
+                            <li class ="dropdown">
+                                <a href ="#" class ="dropdown-toggle" data-toggle="dropdown">Accessories<b class="caret"></b></a>
+                            
+                                <ul class ="dropdown-menu">
+                                  
+                                    <li ><a href ="Add_Product.aspx">Add Product</a></li>
+
+                                </ul>
+                            
+                            
+                             </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage <b class="Caret"></b></a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="Add_Manufacturer.aspx">Add Manufacturer</a></li>
+                                    <li><a href="Add_Category.aspx">Add Category</a></li>
+                                    <li><a href="Add_SubCategory.aspx">Add Sub Category</a></li>
+                                </ul>
+
+                            </li>
+                           
+                            <li><a href ="Login.aspx">Log out</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+       
+      
+
+        <div>
+        <asp:ContentPlaceHolder id="body" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+        <!----Footer-->
+        <footer class ="footer-pos">
+    <hr />
+         <div  class="container">
+             <p class="pull-right"><a href="#">Back to top</a></p>
+             <p>Copyright XOTIC PC INC.2022 |All Rights Reserved</p>
+
+        </div>
+
+        </footer>
+
+</form>
+
+</body>
+</html>
