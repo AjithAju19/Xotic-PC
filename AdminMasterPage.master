@@ -20,7 +20,7 @@
 
 </head>
 <body>
-
+    <div class ="body">
      <form id="form1" runat="server">
     
     <div>
@@ -99,6 +99,6 @@
         </footer>
 
 </form>
-
+</div>
 </body>
 </html>

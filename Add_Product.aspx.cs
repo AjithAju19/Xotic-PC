@@ -100,13 +100,14 @@ public partial class Add_Product : System.Web.UI.Page
             }
 
             string Extention = Path.GetExtension(FileUpload1.PostedFile.FileName);
-            FileUpload1.SaveAs(SavePath + "\\" + TextBox1.Text.ToString().Trim() + "01");
+            FileUpload1.SaveAs(SavePath + "\\" + TextBox1.Text.ToString().Trim() + "01"+Extention);
 
-            SqlCommand cmd1 = new SqlCommand("insert into ProductsImages values('"+n+"','"+TextBox1.Text.ToString().Trim()+"01','"+Extention+"')",con);
+            
+            SqlCommand cmd1 = new SqlCommand("insert into ProductsImages values('"+n+"','"+TextBox1.Text.ToString().Trim()+"01','"+Extention+"');",con);
             cmd1.ExecuteNonQuery();
 
         }
-
+        
         if (FileUpload2.HasFile)
         {
             string SavePath = Server.MapPath("~/Images/") + n;
@@ -117,7 +118,7 @@ public partial class Add_Product : System.Web.UI.Page
             }
 
             string Extention = Path.GetExtension(FileUpload2.PostedFile.FileName);
-            FileUpload2.SaveAs(SavePath + "\\" + TextBox1.Text.ToString().Trim() + "02");
+            FileUpload2.SaveAs(SavePath + "\\" + TextBox1.Text.ToString().Trim() + "02"+Extention);
 
             SqlCommand cmd2 = new SqlCommand("insert into ProductsImages values('" + n + "','" + TextBox1.Text.ToString().Trim() + "02','" + Extention + "')", con);
             cmd2.ExecuteNonQuery();
@@ -134,7 +135,7 @@ public partial class Add_Product : System.Web.UI.Page
             }
 
             string Extention = Path.GetExtension(FileUpload3.PostedFile.FileName);
-            FileUpload3.SaveAs(SavePath + "\\" + TextBox1.Text.ToString().Trim() + "03");
+            FileUpload3.SaveAs(SavePath + "\\" + TextBox1.Text.ToString().Trim() + "03"+Extention);
 
             SqlCommand cmd3 = new SqlCommand("insert into ProductsImages values('" + n + "','" + TextBox1.Text.ToString().Trim() + "03','" + Extention + "')", con);
             cmd3.ExecuteNonQuery();
@@ -151,7 +152,7 @@ public partial class Add_Product : System.Web.UI.Page
             }
 
             string Extention = Path.GetExtension(FileUpload4.PostedFile.FileName);
-            FileUpload4.SaveAs(SavePath + "\\" + TextBox1.Text.ToString().Trim() + "04");
+            FileUpload4.SaveAs(SavePath + "\\" + TextBox1.Text.ToString().Trim() + "04"+Extention);
 
             SqlCommand cmd4 = new SqlCommand("insert into ProductsImages values('" + n + "','" + TextBox1.Text.ToString().Trim() + "04','" + Extention + "')", con);
             cmd4.ExecuteNonQuery();
@@ -169,13 +170,13 @@ public partial class Add_Product : System.Web.UI.Page
             }
 
             string Extention = Path.GetExtension(FileUpload5.PostedFile.FileName);
-            FileUpload5.SaveAs(SavePath + "\\" + TextBox1.Text.ToString().Trim() + "05");
+            FileUpload5.SaveAs(SavePath + "\\" + TextBox1.Text.ToString().Trim() + "05"+Extention);
 
             SqlCommand cmd5 = new SqlCommand("insert into ProductsImages values('" + n + "','" + TextBox1.Text.ToString().Trim() + "05','" + Extention + "')", con);
             cmd5.ExecuteNonQuery();
 
         }
-
+        
         con.Close();
         clear();
 
