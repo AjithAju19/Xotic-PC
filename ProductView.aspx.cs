@@ -85,9 +85,13 @@ public partial class ProductView : System.Web.UI.Page
             return "";
     }
 
+    #region rptrProductDetails_ItemDataBound
+
     protected void rptrProductDetails_ItemDataBound(object sender,RepeaterItemEventArgs e)
     {
 
     }
+
+    #endregion 
 
 }
