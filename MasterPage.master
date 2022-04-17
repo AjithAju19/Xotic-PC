@@ -8,6 +8,7 @@
 
 
     <title>Xotic PC</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -20,6 +21,20 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    
     <link href ="css/Custom.css" rel="stylesheet" />
+
+    <script>
+
+        $(document).ready(function myfunction(){
+            $("#btnCart").click(function myfunction(){
+
+                window.location.href = "/Cart.aspx";
+
+            });
+        });
+
+
+    </script>
+
 
 </head>
 <body>
@@ -57,6 +72,8 @@
                                 <a href ="#" class ="dropdown-toggle" data-toggle="dropdown">Accessories<b class="caret"></b></a>
                             
                                 <ul class ="dropdown-menu">
+                                    <li><a href="Products.aspx">All Products</a></li>
+                                    <li role ="separator" class ="divider"></li>
                                     <li class ="dropdown-header">GAMING DESKTOPS</li>
                                     <li role ="separator" class ="divider"></li>
                                     <li ><a href ="#">Optimal Series</a></li>
@@ -74,8 +91,12 @@
                             
                              </li>
                             <li><a href ="SignUp.aspx">Sign Up</a></li>
-                            <li><a href ="Login.aspx">My Account</a></li>
-                            <li><a href ="Login.aspx">Logout</a></li>
+                            <li><button class ="btn btn-primary" type="button" id ="btnCart" onclick="btnCart_Click">Cart <span class="badge" id="pCount" runat="server"></span></button></li>
+                            <li>
+                            <asp:Button ID="btnlogin" CssClass="btn btn-default navbar-btn" runat="server" Text="Login" onClick="btnlogin_Click"/>
+                            <asp:Button ID="btnlogout" CssClass="btn btn-default navbar-btn" runat="server" Text="Log out" onClick="btnlogout_Click"/>
+
+                            </li>
                         </ul>
                     </div>
 
@@ -94,15 +115,84 @@
 
 
         <!----Footer-->
-        <footer class ="footer-pos">
+        
+        <div class="mister_separator"></div>
 
-         <div  class="container">
-             <p class="pull-right"><a href="#">Back to top</a></p>
-             <p>Copyright XOTIC PC INC.2022 |All Rights Reserved</p>
 
+<footer id="footer-4-cols" class="site-footer">
+    <div id="footer-container">
+        <div id="footer-grid">
+            <div id="left-footer-section" class="footer-section">
+
+                <div id="footer-search">
+                    <form action="">
+                        <input type="search" placeholder="Web design"><button type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="footer-information">
+                    <p><img src="https://img.icons8.com/ios-filled/12/999999/marker.png">CSE -C </p>
+                    <p><img src="https://img.icons8.com/ios-filled/12/999999/phone.png">1234567689</p>
+                    <p><img src="https://img.icons8.com/ios-filled/12/999999/mail.png">noreply@reply.io</p>
+                    <p><img src="https://img.icons8.com/ios-filled/12/999999/clock.png">8:00 AM – 8:00 PM</p>
+                </div>
+            </div>
+
+            <div id="first-footer-section" class="footer-section">
+                <div class="footer-tags">
+                    <h3>SUPPORT</h3>
+                    <a href="#" class="footer-tag">XOTIC PC Forums</a>
+                    <a href="#" class="footer-tag">My Account</a>
+                    <a href="#" class="footer-tag">FAQ</a>
+                    <a href="#" class="footer-tag">Resources</a>
+                    <a href="#" class="footer-tag">Privacy Policy</a>
+                    <a href="#" class="footer-tag">review</a>
+                    <a href="#" class="footer-tag">technology</a>
+                    <a href="#" class="footer-tag">seo</a>
+                    <a href="#" class="footer-tag">UI/UX</a>
+                    <a href="#" class="footer-tag">news</a>
+                    <a href="#" class="footer-tag">ads</a>
+                   
+                </div>
+            </div>
+            <div id="second-footer-section" class="footer-section">
+                <div class="footer-links">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Gaming Desktops</a></li>
+                        <li><a href="#">Gaming Laptops</a></li>
+                        <li><a href="#">Speciality Laptops</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+            <div id="right-footer-section" class="footer-section">
+                <div class="footer-links">
+                    <h3>REVIEWS</h3>
+                    <ul>
+                        <li><a href="#">Customer Reviews</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Information</a></li>
+                        <li><a href="#">Terms of Use<br>& Legal Information</a></li>
+                        <li><a href="#">Message Us</a></li>
+                        <li><a href="#">Leave a Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        </footer>
+        <div id="copyright-information">
+            <div id="footer-logo-section">
+                <div id="footer-logo">
+                    <img  src="" alt="">
+                </div></div>
+            <div id="copyright-text">
+                &copy; Xotic PC. 2022. All rights reserved. 
+            </div>
+            <div id="social-buttons">
+                <img src="https://img.icons8.com/ios-filled/25/999999/facebook--v1.png"/><img src="https://img.icons8.com/ios-filled/25/999999/telegram-app.png"/><img src="https://img.icons8.com/ios-filled/25/999999/pinterest--v1.png"/><img src="https://img.icons8.com/ios-filled/25/999999/instagram--v1.png"/>
+            </div>
+        </div>
+    </div>
+</footer>
         
 
     </form>

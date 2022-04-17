@@ -85,13 +85,81 @@ public partial class ProductView : System.Web.UI.Page
             return "";
     }
 
+
+    protected void btnAddtoCart_Click(object sender, EventArgs e)
+    {
+
+        Int64 PID = Convert.ToInt64(Request.QueryString["pid"]);
+
+        if (Request.Cookies["CartPID"] != null)
+        {
+            string CookiePID = Request.Cookies["CartPID"].Value.Split('=')[1];
+            CookiePID = CookiePID + "," + PID + "-" ;
+
+            HttpCookie CartProducts = new HttpCookie("CartPID");
+            CartProducts.Values["CartPID"] = CookiePID;
+            CartProducts.Expires = DateTime.Now.AddDays(30);
+            Response.Cookies.Add(CartProducts);
+        }
+        else
+        {
+            HttpCookie CartProducts = new HttpCookie("CartPID");
+            CartProducts.Values["CartPID"] = PID.ToString() + "-" ;
+            CartProducts.Expires = DateTime.Now.AddDays(30);
+            Response.Cookies.Add(CartProducts);
+        }
+
+        Response.Redirect("~/ProductView.aspx?pid=" + PID);
+
+    }
+
+
     #region rptrProductDetails_ItemDataBound
 
     protected void rptrProductDetails_ItemDataBound(object sender,RepeaterItemEventArgs e)
     {
 
+
+
+
     }
 
     #endregion 
+/*
+    public void BindCartNumber()
+    {
+        if (Session["USERID"] != null)
+        {
+            string UserIDD = Session["USERID"].ToString();
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand("SP_BindCartNumberz", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                cmd.Parameters.AddWithValue("@UserID", UserIDD);
+                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                {
+                    sda.Fill(dt);
+                    if (dt.Rows.Count > 0)
+                    {
+                        string CartQuantity = dt.Compute("Sum(Qty)", "").ToString();
+                        CartBadge.InnerText = CartQuantity;
+
+                    }
+                    else
+                    {
+                        CartBadge.InnerText = 0.ToString();
+                    }
+                }
+            }
+        }
+    }
+
+
+
+*/
+
 
 }

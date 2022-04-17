@@ -6,6 +6,7 @@
 
     <br /><br /><br />
 
+
     <div style ="padding-top: 50px">
         <div class ="col-md-5">
             <div style ="max-width:480px" class="thumbnail">
@@ -73,7 +74,7 @@
 
             <div class="divDet1">
           
-               <asp:Button ID="btnAddtoCart" runat="server" CssClass="mainButton" Text="ADD TO CART" />
+               <asp:Button ID="btnAddtoCart" runat="server" CssClass="mainButton" Text="ADD TO CART" onClick="btnAddtoCart_Click"/>
 
                 <asp:Label ID="lblError" CssClass ="text-danger" runat="server"></asp:Label>
             

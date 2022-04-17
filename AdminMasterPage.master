@@ -88,15 +88,83 @@
 
 
         <!----Footer-->
-        <footer class ="footer-pos">
-    <hr />
-         <div  class="container">
-             <p class="pull-right"><a href="#">Back to top</a></p>
-             <p>Copyright XOTIC PC INC.2022 |All Rights Reserved</p>
+          <div class="mister_separator"></div>
 
+
+<footer id="footer-4-cols" class="site-footer">
+    <div id="footer-container">
+        <div id="footer-grid">
+            <div id="left-footer-section" class="footer-section">
+
+                <div id="footer-search">
+                    <form action="">
+                        <input type="search" placeholder="Web design"><button type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="footer-information">
+                    <p><img src="https://img.icons8.com/ios-filled/12/999999/marker.png">CSE -C </p>
+                    <p><img src="https://img.icons8.com/ios-filled/12/999999/phone.png">1234567689</p>
+                    <p><img src="https://img.icons8.com/ios-filled/12/999999/mail.png">noreply@reply.io</p>
+                    <p><img src="https://img.icons8.com/ios-filled/12/999999/clock.png">8:00 AM – 8:00 PM</p>
+                </div>
+            </div>
+
+            <div id="first-footer-section" class="footer-section">
+                <div class="footer-tags">
+                    <h3>SUPPORT</h3>
+                    <a href="#" class="footer-tag">XOTIC PC Forums</a>
+                    <a href="#" class="footer-tag">My Account</a>
+                    <a href="#" class="footer-tag">FAQ</a>
+                    <a href="#" class="footer-tag">Resources</a>
+                    <a href="#" class="footer-tag">Privacy Policy</a>
+                    <a href="#" class="footer-tag">review</a>
+                    <a href="#" class="footer-tag">technology</a>
+                    <a href="#" class="footer-tag">seo</a>
+                    <a href="#" class="footer-tag">UI/UX</a>
+                    <a href="#" class="footer-tag">news</a>
+                    <a href="#" class="footer-tag">ads</a>
+                   
+                </div>
+            </div>
+            <div id="second-footer-section" class="footer-section">
+                <div class="footer-links">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Gaming Desktops</a></li>
+                        <li><a href="#">Gaming Laptops</a></li>
+                        <li><a href="#">Speciality Laptops</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+            <div id="right-footer-section" class="footer-section">
+                <div class="footer-links">
+                    <h3>REVIEWS</h3>
+                    <ul>
+                        <li><a href="#">Customer Reviews</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Information</a></li>
+                        <li><a href="#">Terms of Use<br>& Legal Information</a></li>
+                        <li><a href="#">Message Us</a></li>
+                        <li><a href="#">Leave a Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        </footer>
+        <div id="copyright-information">
+            <div id="footer-logo-section">
+                <div id="footer-logo">
+                    <img  src="" alt="">
+                </div></div>
+            <div id="copyright-text">
+                &copy; Xotic PC. 2022. All rights reserved. 
+            </div>
+            <div id="social-buttons">
+                <img src="https://img.icons8.com/ios-filled/25/999999/facebook--v1.png"/><img src="https://img.icons8.com/ios-filled/25/999999/telegram-app.png"/><img src="https://img.icons8.com/ios-filled/25/999999/pinterest--v1.png"/><img src="https://img.icons8.com/ios-filled/25/999999/instagram--v1.png"/>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </form>
 </div>

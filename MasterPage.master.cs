@@ -10,5 +10,56 @@ public partial class MasterPage : System.Web.UI.MasterPage
     protected void Page_Load(object sender, EventArgs e)
     {
 
+        BindCartNumber();
+        /*if (Session["USERNAME"] != null)
+        {
+            btnSignup.Visible = false;
+            btnSignin.Visible = false;
+            btnSignOut.Visible = true;
+        }
+        else
+        {
+            btnSignup.Visible = true;
+            btnSignin.Visible = true;
+            btnSignOut.Visible = false;
+        }
+        */
+    }
+
+    protected void btnlogin_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Login.aspx");
+
+    }
+
+    protected void btnlogout_Click(object sender, EventArgs e)
+    {
+
+        Session["username"] = null;
+        Response.Redirect("~/Home.aspx");
+
+
+    }
+
+    public void BindCartNumber()
+    {
+        if (Request.Cookies["CartPID"] != null)
+        {
+            string CookiePID = Request.Cookies["CartPID"].Value.Split('=')[1];
+            string[] ProductArray = CookiePID.Split(',');
+            int ProductCount = ProductArray.Length;
+            pCount.InnerText = ProductCount.ToString();
+        }
+        else
+        {
+            pCount.InnerText = 0.ToString();
+        }
+    }
+
+    protected void btnCart_Click(object sender, EventArgs e)
+    {
+
+        Response.Redirect("~/Cart.aspx");
+
     }
 }

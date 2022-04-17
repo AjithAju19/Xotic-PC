@@ -1,6 +1,25 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Home" %>
 
+ 
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+    <script>
+
+        $(document).ready(function myfunction(){
+            $("#btnCart").click(function myfunction(){
+
+                window.location.href = "/Cart.aspx";
+
+            });
+        });
+
+
+    </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
      <!-- Carousel begins..-->
@@ -63,6 +82,8 @@
 
     <br />
 
+       
+
     <!--Middle content starts -->
     <div class ="container center">
         <div class="row">
@@ -105,6 +126,186 @@
     </div>
 
     <!--Middle Content closes-->
+
+    <br /><br /><br />
+
+     <div class="portfolio">
+  <h2 class="title" >XOTIC PC LIVE</h2>
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">Gaming PC/ Laptops</span>
+      <span class="category">MSI / Razer / Alienware </span>
+    </div>
+    <div class="image">
+      <img src="https://storage-asset.msi.com/event/2019/mystic-light-rgb-pc/images/partner01.jpg" alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">Gaming PC/ Laptops</span>
+      <span class="category">MSI / Razer / Alienware </span>
+    </div>
+    <div class="image">
+      <img src="https://www.howtogeek.com/wp-content/uploads/2021/05/rgb_header.jpg?width=1198&trim=1,1&bg-color=000&pad=1,1" alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">Gaming PC/ Laptops</span>
+      <span class="category">MSI / Razer / Alienware </span>
+    </div>
+    <div class="image">
+      <img src="https://i.pinimg.com/564x/28/a1/6c/28a16cf998fe7cec25ab2b6d7580b764.jpg" alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">Gaming PC/ Laptops</span>
+      <span class="category">MSI / Razer / Alienware </span>
+    </div>
+    <div class="image">
+      <img src="https://gearopen.com/wp-content/uploads/2021/06/Untitled1569-768x548.png" alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">Gaming PC/ Laptops</span>
+      <span class="category">MSI / Razer / Alienware </span>
+    </div>
+    <div class="image">
+      <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1398&q=80" alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+     <span class="title">Gaming PC/ Laptops</span>
+      <span class="category">MSI / Razer / Alienware </span>
+    </div>
+    <div class="image">
+      <img src="https://i.pinimg.com/564x/c0/bd/96/c0bd962c371d5666fbfb82c09ccccb88.jpg" alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+     <span class="title">Gaming PC/ Laptops</span>
+      <span class="category">MSI / Razer / Alienware </span>
+    </div>
+    <div class="image">
+      <img src="https://i.pinimg.com/564x/e3/e5/ec/e3e5ece4d39e75ff4202a15729e784f4.jpg" alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+     <span class="title">Gaming PC/ Laptops</span>
+      <span class="category">MSI / Razer / Alienware </span>
+    </div>
+    <div class="image">
+      <img src="https://i.pinimg.com/564x/2c/c9/52/2cc952c3daabe8289b7adb4cbcfa02b9.jpg" alt="" />
+    </div>
+  </a>
+
+</div>
+
+
+
+      <style type="text/css">
+        .title{
+            color:white;
+        }
+    .portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 320px;
+}
+
+.portfolio h2 {
+  flex-basis: 100%;
+  text-align: center;
+  margin: 50px auto 30px;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #111;
+}
+.card {
+  width: 25%;
+  overflow: hidden;
+  position: relative;
+}
+.card .content {
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  bottom: -100px;
+  transition: all 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100px;
+  background: #111;
+}
+.card .image {
+  z-index: 1;
+  height: 100%;
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+  transform: scale(1.2);
+}
+
+.card:hover .content {
+  bottom: 0px;
+  color: #fff;
+}
+
+.card:hover .image img {
+  transform: scale(1);
+}
+
+.card .content span:first-child {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+
+.card .content span:last-child {
+  font-size: 14px;
+  color: #18cfab;
+  text-align: center;
+  font-weight: 700;
+}
+
+
+@media screen and (max-width: 768px) {
+  .card {
+  width: 50%;
+  }
+  .card .content {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+  width: 100%;
+  }
+}
+    </style>
 
 
 
