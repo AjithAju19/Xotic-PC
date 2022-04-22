@@ -14,15 +14,54 @@ public partial class Cart : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-           
-            BindProductCart();
+            if (Session["email"] != null)
+            {
+                BindProductCart();
+                BindCartNumber();
+            }
+
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
+
+    }
+
+    public void BindCartNumber()
+    {
 
     }
 
     protected void btnRemoveItem_Click(object sender, EventArgs e)
     {
+        /*
+        string CookiePID = Request.Cookies["CartPID"].Value.Split('=')[1];
 
+        Button btn = (Button)(sender);
+
+        List<String> CookiePIDList = CookiePID.Split(',').Select(i => i.Trim()).Where(i => i != string.Empty).ToList();
+
+        string CookiePIDUpdated = String.Join(",", CookiePIDList.ToArray());
+
+        if(CookiePIDUpdated == "")
+        {
+            HttpCookie CartProducts = Request.Cookies["CartPID"];
+            CartProducts.Values["CartPID"] = null;
+            CartProducts.Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies.Add(CartProducts);
+        }
+
+        else
+        {
+            HttpCookie CartProducts = Request.Cookies["CartPID"];
+            CartProducts.Values["CartPID"] = CookiePIDUpdated;
+            CartProducts.Expires = DateTime.Now.AddDays(30);
+            Response.Cookies.Add(CartProducts);
+        }
+
+        Response.Redirect("~/Cart.aspx");
+*/
     }
 
     protected void btnBuyNow_Click(object sender, EventArgs e)
@@ -30,9 +69,12 @@ public partial class Cart : System.Web.UI.Page
 
     }
 
+    
     private void BindProductCart()
     {
-        
+        if (Request.Cookies["CartPID"] != null)
+        {
+
             string CookieData = Request.Cookies["CartPID"].Value.Split('=')[1];
             string[] CookieDataArray = CookieData.Split(',');
 
@@ -45,7 +87,7 @@ public partial class Cart : System.Web.UI.Page
                 for (int i = 0; i < CookieDataArray.Length; i++)
                 {
                     string PID = CookieDataArray[i].ToString().Split('-')[0];
-                    string SizeID = CookieDataArray[i].ToString().Split('-')[1];
+                    //string SizeID = CookieDataArray[i].ToString().Split('-')[1];
 
                     string strConnString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
 
@@ -54,14 +96,14 @@ public partial class Cart : System.Web.UI.Page
 
                     SqlCommand cmd = new SqlCommand("select top(1) A.*,B.* from Products A inner join ProductsImages B on A.pid = '"
                         + PID + "'", con);
-                        
-                            cmd.CommandType = CommandType.Text;
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    { 
-                                sda.Fill(dtBrands);
-                            
 
-                        
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                    {
+                        sda.Fill(dtBrands);
+
+
+
                     }
                     CartTotal += Convert.ToInt64(dtBrands.Rows[i]["price"]);
                     Total += Convert.ToInt64(dtBrands.Rows[i]["sellingprice"]);
@@ -74,14 +116,17 @@ public partial class Cart : System.Web.UI.Page
                 spanTotal.InnerText = "Rs. " + Total.ToString();
                 spanDiscount.InnerText = "- " + (CartTotal - Total).ToString();
             }
-           else
+            else
             {
                 //TODO Show Empty Cart
                 noofitems.InnerText = "Your Shopping Cart is Empty";
                 divPriceDetails.Visible = false;
-            } 
+            }
         }
-     
+
+    }
     
+
+   
 
 }

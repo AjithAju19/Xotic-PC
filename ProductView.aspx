@@ -6,7 +6,7 @@
 
     <br /><br /><br />
 
-
+    <div class ="container">
     <div style ="padding-top: 50px">
         <div class ="col-md-5">
             <div style ="max-width:480px" class="thumbnail">
@@ -66,7 +66,7 @@
             <div class ="divDet1">
             <h1 class ="proNameView"><%# Eval("pname") %> </h1>
             <span class ="proOgPrice"><%# Eval("price") %></span>
-            <span class ="proPriceDiscountView"> <%# string.Format("{0}",Convert.ToInt64(Eval("price")) - Convert.ToInt64(Eval("sellingprice"))) %> off</span>
+            <span class ="proPriceDiscountView"> <%# string.Format("{0}",Convert.ToInt64(Eval("price")) - Convert.ToInt64(Eval("sellingprice"))) %> Discount</span>
         
             <p class ="proPriceView"> <%# Eval("sellingprice") %> </p>
         
@@ -99,6 +99,9 @@
 
        </div>
     </div>
+    </div>
+
+    <br /><br /><br /><br />
 
 </asp:Content>
 

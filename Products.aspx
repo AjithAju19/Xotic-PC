@@ -8,7 +8,7 @@
 
     <h3>View all products</h3>
 
-  
+    <div class ="body">
     <div class ="row" style ="padding-top : 50px">
         <asp:Repeater ID ="Repeater1" runat="server">
         <ItemTemplate>
@@ -27,7 +27,7 @@
                     <div class="proName"><%# Eval("pname") %> </div>
                      <div class ="proPrice">
                          <span class ="proOgPrice"><%# Eval("price") %></span><%# Eval("sellingprice") %>
-                        <span class ="proPriceDiscount">(<%# Eval("Discount") %>off)</span>
+                        <span class ="proPriceDiscount">(<%# Eval("Discount") %> Discount)</span>
                      </div>
                 </div>
 
@@ -37,7 +37,8 @@
     </ItemTemplate>
     </asp:Repeater>
     </div>
+    </div>
 
-
+    <br /><br /><br /><br />
 </asp:Content>
 

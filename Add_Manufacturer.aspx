@@ -37,8 +37,23 @@
                 <h1>Manufacturer</h1>
          <hr />
 
+                <h3>All Manufacturers</h3>
+
+                 <div>
+             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns ="false">
+                 <Columns>
+                     <asp:BoundField DataField="mid" HeaderText="MID" />
+                     <asp:BoundField DataField="mname" HeaderText="Manufacturer Name" />
+                 </Columns>
+
+             </asp:GridView>
+                 </div>
+
+
+    <!--
          <div class="panel panel-default">
              <div class="panel-heading">All Manufacturers</div>
+            
         
              <asp:Repeater ID="Repeater1" runat="server">
              
@@ -50,7 +65,7 @@
                  <tr>
                      <th>#</th>
                      <th>Manufacturer</th>
-                      <th>Edit</th>
+                   <!--   <th>Edit</th>  
                  </tr>
                  </thead>
 
@@ -76,7 +91,7 @@
               </FooterTemplate>
 
                  </asp:Repeater>
-
+    -->
          </div>
 
          </div>
@@ -84,7 +99,7 @@
 
             </div>
 
-            
+            </div>
 
 
 

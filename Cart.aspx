@@ -3,7 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
-    <br /><br /><br />
+    <br /><br /><br /><br /><br />
+    
+    <div class="container">
     <div style ="padding-top:50px">
         <br /><br />
         <div class="col-md-9" >
@@ -46,17 +48,20 @@
                         <span class="float-right priceGreen" id="spanDiscount" runat="server"></span>
                     </div>
                 </div>
+                <br /><br />
                 <div>
                     <div class="proPriceView">
                         <label>Total</label>
                         <span class="float-right" id="spanTotal" runat="server"></span>
                     </div>
+                    <br />
                     <div>
-                        <asp:Button ID="btnBuyNow" OnClick="btnBuyNow_Click" CssClass="buyNowBtn" runat="server" Text="BUY NOW" />
+                        <asp:Button ID="btnBuyNow" OnClick="btnBuyNow_Click" CssClass="buyNowBtn" runat="server" Text="BUY NOW" BackColor="#20BD99" ForeColor="White" BorderColor="#14CDA8" />
                     </div>
                 </div>
             </div>
         </div>
-    
+       </div>
+        <br /><br /><br /><br /><br />
 </asp:Content>
             

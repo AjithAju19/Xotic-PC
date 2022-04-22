@@ -58,7 +58,7 @@
                             <span class =" icon-bar"></span>
 
                         
-                        <a class =" navbar-brand" href="#"><span> <img src ="icons/xoticpc_logo.jpg" alt ="Xotic PC logo" height ="70" width ="120"/></span> </a>
+                        <a class =" navbar-brand" href="#"><span> <img src ="icons/164-1647272_xotic-pc-logo-png-download-xotic-pc-logo.png" alt ="Xotic PC logo" height ="25" width ="120"/></span> </a>
 
                     </div>  
 
@@ -67,31 +67,21 @@
                             <li class =""><a href ="Home.aspx">Home</a></li>
                              <li class =""><a href ="#">About</a></li>
                              <li class =""><a href ="#">Contact us</a></li>
-                            <li class =""><a href ="#">Blog-</a></li>
+                            
                             <li class ="dropdown">
                                 <a href ="#" class ="dropdown-toggle" data-toggle="dropdown">Accessories<b class="caret"></b></a>
                             
                                 <ul class ="dropdown-menu">
                                     <li><a href="Products.aspx">All Products</a></li>
-                                    <li role ="separator" class ="divider"></li>
-                                    <li class ="dropdown-header">GAMING DESKTOPS</li>
-                                    <li role ="separator" class ="divider"></li>
-                                    <li ><a href ="#">Optimal Series</a></li>
-                                    <li ><a href ="#">Advanced Series</a></li>
-                                    <li ><a href ="#">Extreme Series</a></li>
-
-                                    <li class ="dropdown-header">GAMING LAPTOPS</li>
-                                    <li role ="separator" class ="divider"></li> 
-                                    <li ><a href ="#">Optimal Laptop Series NVIDIA 1660TI or Less</a></li>
-                                    <li ><a href ="#">Advanced Laptop Series NVIDIA 2060/3060</a></li>
-                                    <li ><a href ="#">Extreme Laptop Series NVIDIA 2070/3070</a></li>
-
+                                    
                                 </ul>
                             
                             
                              </li>
                             <li><a href ="SignUp.aspx">Sign Up</a></li>
-                            <li><button class ="btn btn-primary" type="button" id ="btnCart" onclick="btnCart_Click">Cart <span class="badge" id="pCount" runat="server"></span></button></li>
+                            <li><button class ="btn btn-primary" type="button" id ="btnCart" onclick="btnCart_Click">Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+</svg><span class="badge" id="pCount" runat="server"></span></button></li>
                             <li>
                             <asp:Button ID="btnlogin" CssClass="btn btn-default navbar-btn" runat="server" Text="Login" onClick="btnlogin_Click"/>
                             <asp:Button ID="btnlogout" CssClass="btn btn-default navbar-btn" runat="server" Text="Log out" onClick="btnlogout_Click"/>
@@ -126,7 +116,8 @@
 
                 <div id="footer-search">
                     <form action="">
-                        <input type="search" placeholder="Web design"><button type="submit">Search</button>
+                        <input type="search" placeholder="Web design">
+                        <asp:Button ID="btnSearch" runat="server" Text="Search" />
                     </form>
                 </div>
                 <div class="footer-information">
@@ -193,7 +184,7 @@
         </div>
     </div>
 </footer>
-        
+      
 
     </form>
   

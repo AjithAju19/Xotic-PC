@@ -46,7 +46,7 @@
                  <tr>
                      <th>#</th>
                      <th>Category</th>
-                      <th>Edit</th>
+                   <!--   <th>Edit</th>  -->
                  </tr>
                  </thead>
 
@@ -82,7 +82,7 @@
 
 
 
-            </div>
+          
 
          
 

@@ -176,7 +176,7 @@ footer#footer-4-cols div#footer-search input {
     width: 130px;
 }
 
-footer#footer-4-cols div#footer-search button {
+#btnSearch {
     font-family: "Open Sans", sans-serif;
     border: 2px solid #999999;
     background: transparent;
@@ -186,14 +186,14 @@ footer#footer-4-cols div#footer-search button {
     cursor: pointer;
 }
 
-    footer#footer-4-cols div#footer-search button:hover {
+    #btnSearch:hover {
         background: black;
         color: white;
         border: 2px solid #666666;
         transition: all 0.25s ease;
     }
 
-    footer#footer-4-cols div#footer-search button:active {
+    #btnSearch:active {
         position: relative;
         top: 1px;
     }
@@ -443,7 +443,7 @@ footer#footer-4-cols div#copyright-information {
         }
 }
 
-.RemoveButton{
+.removeButton{
 
     border-radius: 3px;
     outline: 0;
@@ -480,7 +480,7 @@ footer#footer-4-cols div#copyright-information {
 
 }
 
-.buyNowbtn {
+#btnBuyNow {
     border-radius: 3px;
     outline: 0;
     margin-top: 10px;
@@ -489,7 +489,7 @@ footer#footer-4-cols div#copyright-information {
     min-height: 22px;
     padding: 10px 15px;
     font-weight: 500;
-    background-color: forestgreen;
+    background-color: #20bd99;
     color: #fff;
     border: 1px solid #14cda8;
     width: 100%;

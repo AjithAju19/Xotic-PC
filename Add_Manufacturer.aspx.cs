@@ -94,10 +94,12 @@ public partial class Add_Manufacturer : System.Web.UI.Page
         SqlCommand cmd = new SqlCommand("select * from Manufacturer", con);
 
         SqlDataReader sdr = cmd.ExecuteReader();
-        
-        Repeater1.DataSource = sdr;
-        Repeater1.DataBind();
 
+        // Repeater1.DataSource = sdr;
+        //Repeater1.DataBind();
+
+        GridView1.DataSource = sdr;
+        GridView1.DataBind();
 
     }
 

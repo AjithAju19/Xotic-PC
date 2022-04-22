@@ -5,8 +5,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
     
     <br /><br /><br /><br /><br />
+    <div class =" body">
+        <label class="col-xs-11">Register</label>
     <div>
-    <div class ="center-page">
+        <br /><br />
+    <div class="container">
 
         <label class="col-xs-11">First Name:</label>
         <div class ="col-xs-11">
@@ -36,7 +39,9 @@
     
     </div>
     </div>
+    </div>
 
+    <br /><br /><br /><br />
 
 </asp:Content>
 

@@ -56,15 +56,9 @@
 
 
 
-             <div class="form-group">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-            
-                 <asp:HyperLink ID ="HyperLink2" runat="server" NavigateUrl="~/Forgot_Password.aspx" >Forgot Password ?</asp:HyperLink>
-            </div>
-                 </div>
+           
 
-
+            <!--
             <div class="form-group">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
@@ -72,14 +66,14 @@
                     <asp:Label ID="Label3" CssClass="text-danger" runat="server" Text="Label"></asp:Label>
             </div>
             </div>
-
+            -->
              
 
 
         </div>
     </div>
 
-
+    <br /><br /><br /><br />
 
 </asp:Content>
 

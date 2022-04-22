@@ -12,7 +12,10 @@ public partial class Add_Category : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        BindCategoryRepeater();
+        //if (!IsPostBack)
+        
+            BindCategoryRepeater();
+        
     }
 
     protected void Addcategory_Click(object sender, EventArgs e)

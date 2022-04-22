@@ -11,19 +11,19 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
 
         BindCartNumber();
-        /*if (Session["USERNAME"] != null)
+        if (Session["email"] != null)
         {
-            btnSignup.Visible = false;
-            btnSignin.Visible = false;
-            btnSignOut.Visible = true;
+            
+            btnlogin.Visible = false;
+            btnlogout.Visible = true;
         }
         else
         {
-            btnSignup.Visible = true;
-            btnSignin.Visible = true;
-            btnSignOut.Visible = false;
+            
+            btnlogin.Visible = true;
+            btnlogout.Visible = false;
         }
-        */
+        
     }
 
     protected void btnlogin_Click(object sender, EventArgs e)

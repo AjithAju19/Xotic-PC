@@ -43,12 +43,12 @@
         <img src= "icons/game-ready.jpg" alt="Los Angeles" style="width:100%;">
       
           <div class="carousel-caption">
-              <p><a class ="btn btn-lg btn-primary" href="#" role="button">Buy now</a></p>
+              <p><a class ="btn btn-lg btn-primary" href="Products.aspx" role="button">Buy now</a></p>
           </div>
       
       
       </div>
-
+        <br /><br /><br /><br />
       <div class="item">
         <img src="icons/geforce-max-q-fb-evens-3c33-D@2x.jpg" alt="Chicago" style="width:100%;">
       </div>
@@ -92,7 +92,7 @@
             
                 <h4>MOBILE 3000 SERIES RTX AMPERE</h4>
                 <p>GeForce RTX™ 30 Series GPUs power the world’s fastest laptops for gamers and creators. They’re built with the award-winning Ampere—NVIDIA’s...</p>
-                <p><a class="btn btn-default" href="#" role="button">Read More &raquo;</a></p>
+           <!--     <p><a class="btn btn-default" href="#" role="button">Read More &raquo;</a></p> -->
             
             </div>
 
@@ -101,7 +101,7 @@
             
                 <h4>PERFORMANCE TO RULE YOUR GAME AND RX 6000 Series</h4>
                 <p>Introducing the AMD Radeon™ RX 6000 Series graphics cards, featuring the breakthrough AMD RDNA™ 2 architecture, engineered to deliver powerhouse...</p>
-                <p><a class="btn btn-default" href="#" role="button">Read More &raquo;</a></p>
+           <!--     <p><a class="btn btn-default" href="#" role="button">Read More &raquo;</a></p> -->
             
             </div>
 
@@ -110,7 +110,7 @@
             
                 <h4>BE UNSTOPPABLE WITH NEW AMD RYZEN 5000 SERIES</h4>
                 <p>Be unstoppable with the unprecedented speed of the world’s best desktop processors. AMD RYZEN 5000 Series processors deliver the ultimate in high...</p>
-                <p><a class="btn btn-default" href="#" role="button">Read More &raquo;</a></p>
+            <!--    <p><a class="btn btn-default" href="#" role="button">Read More &raquo;</a></p> -->
             
             </div>
 
@@ -119,7 +119,7 @@
             
                 <h4>GEOFORCE RTX 30 SERIES PCS THE ULTIMATE PLAY</h4>
                 <p>PCs equipped with GeForce RTX™ 30 Series GPUs deliver the ultimate performance for gamers and creators. They’re powered by Ampere—NVIDIA’s...</p>
-                <p><a class="btn btn-default" href="#" role="button">Read More &raquo;</a></p>
+              <!--  <p><a class="btn btn-default" href="#" role="button">Read More &raquo;</a></p> -->
             
             </div>
         </div>
@@ -130,7 +130,7 @@
     <br /><br /><br />
 
      <div class="portfolio">
-  <h2 class="title" >XOTIC PC LIVE</h2>
+  <h1 class="title" >XOTIC PC LIVE</h1>
   <a href="#" class="card">
     <div class="content">
       <span class="title">Gaming PC/ Laptops</span>
@@ -157,7 +157,7 @@
       <span class="category">MSI / Razer / Alienware </span>
     </div>
     <div class="image">
-      <img src="https://i.pinimg.com/564x/28/a1/6c/28a16cf998fe7cec25ab2b6d7580b764.jpg" alt="" />
+      <img src="https://www.nubgamerz.com/wp-content/uploads/2021/02/blog.jpg" alt="" />
     </div>
   </a>
 
@@ -187,7 +187,7 @@
       <span class="category">MSI / Razer / Alienware </span>
     </div>
     <div class="image">
-      <img src="https://i.pinimg.com/564x/c0/bd/96/c0bd962c371d5666fbfb82c09ccccb88.jpg" alt="" />
+      <img src="https://progameguides.com/wp-content/uploads/2021/10/rgbsetup-1.jpg" alt="" />
     </div>
   </a>
 
@@ -197,7 +197,7 @@
       <span class="category">MSI / Razer / Alienware </span>
     </div>
     <div class="image">
-      <img src="https://i.pinimg.com/564x/e3/e5/ec/e3e5ece4d39e75ff4202a15729e784f4.jpg" alt="" />
+      <img src="https://www.howtogeek.com/wp-content/uploads/2021/06/rbg_gear.jpg?trim=1,1&bg-color=000&pad=1,1" alt="" />
     </div>
   </a>
 
@@ -207,17 +207,18 @@
       <span class="category">MSI / Razer / Alienware </span>
     </div>
     <div class="image">
-      <img src="https://i.pinimg.com/564x/2c/c9/52/2cc952c3daabe8289b7adb4cbcfa02b9.jpg" alt="" />
+      <img src="https://storage-asset.msi.com/event/2019/mystic-light-rgb-pc/images/partner01.jpg" alt="" />
     </div>
   </a>
 
 </div>
 
+    <br /><br /><br /><br /><br />
 
+<style type="text/css">
 
-      <style type="text/css">
-        .title{
-            color:white;
+.title{
+   color:white;
         }
     .portfolio {
   display: flex;
@@ -225,14 +226,14 @@
   min-width: 320px;
 }
 
-.portfolio h2 {
+.portfolio h1 {
   flex-basis: 100%;
   text-align: center;
   margin: 50px auto 30px;
   text-transform: uppercase;
   font-size: 20px;
   letter-spacing: 2px;
-  color: #111;
+  color: #fff;
 }
 .card {
   width: 25%;

@@ -59,7 +59,7 @@
                      <th>#</th>
                      <th>Sub Category</th>
                      <th>Main Category</th>
-                      <th>Edit</th>
+                   <!--   <th>Edit</th>  -->
                  </tr>
                  </thead>
 
