@@ -6,7 +6,7 @@
 
     <br /><br /><br /><br /><br />
 
-    <asp:Label id ="Label1"  CssClass = "text-success" runat="server" Text="Label"></asp:Label>
+    <asp:Label id ="Label1" runat="server" Text="Label" ForeColor="Black"></asp:Label>
 
 </asp:Content>
 

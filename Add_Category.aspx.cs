@@ -60,27 +60,33 @@ public partial class Add_Category : System.Web.UI.Page
         TextBox1.Text = string.Empty;
     }
 
-/*
+    
 
-    private void BindCategoryRepeater()
-    {
-        SqlConnection con = new SqlConnection();
-        con.ConnectionString = "Data Source=AJITH\\SERVER;Initial Catalog='Xotic PC';Integrated Security=True";
+        private void BindCategoryRepeater()
+        {
+             string strConnString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
 
+        SqlConnection con = new SqlConnection(strConnString);
 
         con.Open();
 
-        SqlCommand cmd = new SqlCommand("select * from Category", con);
+            SqlCommand cmd = new SqlCommand("select * from Category", con);
 
-        SqlDataAdapter sda = new SqlDataAdapter(cmd);
-        DataTable dt = new DataTable();
-        sda.Fill(dt);
-        Repeater1.DataSource = dt;
-        Repeater1.DataBind();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            //Repeater1.DataSource = dt;
+            //Repeater1.DataBind();
 
 
-    }
-*/
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
+
+
+
+
+        }
+    /*
 
     private void BindCategoryRepeater()
     {
@@ -94,10 +100,17 @@ public partial class Add_Category : System.Web.UI.Page
 
         SqlDataReader sdr = cmd.ExecuteReader();
        
-        Repeater1.DataSource = sdr;
-        Repeater1.DataBind();
+        //Repeater1.DataSource = sdr;
+        //Repeater1.DataBind();
+
+
+        GridView1.DataSource = sdr;
+        GridView1.DataBind();
+
 
 
     }
+
+    */
 
 }

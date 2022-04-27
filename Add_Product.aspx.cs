@@ -182,7 +182,7 @@ public partial class Add_Product : System.Web.UI.Page
 
     }
 
-/*
+
     private void BindMainCat()
     {
 
@@ -212,8 +212,8 @@ public partial class Add_Product : System.Web.UI.Page
 
     }
 
-*/
 
+/*
     private void BindMainCat()
     {
 
@@ -239,8 +239,8 @@ public partial class Add_Product : System.Web.UI.Page
 
 
     }
-
-    /*
+    */
+    
     private void BindManufacturer()
     {
 
@@ -269,8 +269,9 @@ public partial class Add_Product : System.Web.UI.Page
 
 
     }
-     */
 
+     
+    /*
     private void BindManufacturer()
     {
 
@@ -298,8 +299,8 @@ public partial class Add_Product : System.Web.UI.Page
 
     }
 
-
-
+    */
+    /*
     protected void ddl2_SelectedIndexChanged(object sender, EventArgs e)
     {
         ddl3.Enabled = true;
@@ -325,6 +326,41 @@ public partial class Add_Product : System.Web.UI.Page
             ddl3.DataBind();
             ddl3.Items.Insert(0, new ListItem("-Select-", "0"));
         }
+    }
+
+    */
+
+    protected void ddl2_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+        ddl3.Enabled = true;
+
+        string MainCategoryID = ddl2.SelectedItem.Value;
+
+
+        string strConnString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+
+        SqlConnection con = new SqlConnection(strConnString);
+
+
+        con.Open();
+        SqlCommand cmd = new SqlCommand("select * from SubCategory where maincatid = '" + MainCategoryID + "'", con);
+
+        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+        DataTable dt = new DataTable();
+        sda.Fill(dt);
+
+        if (dt.Rows.Count != 0)
+        {
+            ddl3.DataSource = dt;
+            ddl3.DataTextField = "subcatname";
+            ddl3.DataValueField = "subcatid";
+            ddl3.DataBind();
+            ddl3.Items.Insert(0, new ListItem("-Select-", "0"));
+        }
+
+
+
     }
 
 

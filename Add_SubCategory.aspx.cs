@@ -12,10 +12,17 @@ public partial class Add_SubCategory : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
+        if (Session["email"] != null)
         {
-            BindMainCat();
-            BindSubCategoryRepeater();
+            if (!IsPostBack)
+            {
+                BindMainCat();
+                BindSubCategoryRepeater();
+            }
+        }
+        else
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 
@@ -71,7 +78,7 @@ public partial class Add_SubCategory : System.Web.UI.Page
         TextBox1.Text = string.Empty;
     }
 
-    /*
+    
     private void BindMainCat()
     {
         string strConnString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
@@ -99,8 +106,8 @@ public partial class Add_SubCategory : System.Web.UI.Page
 
 
     }
-    */
-
+    
+    /*
     private void BindMainCat()
     {
         string strConnString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
@@ -125,27 +132,34 @@ public partial class Add_SubCategory : System.Web.UI.Page
 
     }
 
-/*
-    private void BindSubCategoryRepeater()
-    {
-        string strConnString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+    */
 
-        SqlConnection con = new SqlConnection(strConnString);
+    
+        private void BindSubCategoryRepeater()
+        {
+            string strConnString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
 
-        con.Open();
+            SqlConnection con = new SqlConnection(strConnString);
 
-        SqlCommand cmd = new SqlCommand("select A.*,B.* from SubCategory A inner join Category B on B.catid = A.maincatid", con);
+            con.Open();
 
-        SqlDataAdapter sda = new SqlDataAdapter(cmd);
-        DataTable dt = new DataTable();
-        sda.Fill(dt);
-        Repeater1.DataSource = dt;
-        Repeater1.DataBind();
+            SqlCommand cmd = new SqlCommand("select A.*,B.* from SubCategory A inner join Category B on B.catid = A.maincatid", con);
+
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            //Repeater1.DataSource = dt;
+            //Repeater1.DataBind();
 
 
-    }
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
 
-*/
+
+
+        }
+
+    /*
     private void BindSubCategoryRepeater()
     {
         string strConnString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
@@ -157,12 +171,16 @@ public partial class Add_SubCategory : System.Web.UI.Page
         SqlCommand cmd = new SqlCommand("select A.*,B.* from SubCategory A inner join Category B on B.catid = A.maincatid", con);
 
         SqlDataReader sdr = cmd.ExecuteReader();
-        
-        Repeater1.DataSource = sdr;
-        Repeater1.DataBind();
+
+        //Repeater1.DataSource = sdr;
+        //Repeater1.DataBind();
+
+        GridView1.DataSource = sdr;
+        GridView1.DataBind();
 
 
     }
+    */
 
 
 

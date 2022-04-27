@@ -11,4 +11,11 @@ public partial class AdminMasterPage : System.Web.UI.MasterPage
     {
 
     }
+
+    protected void Logout_Click(object sender, EventArgs e)
+    {
+        Session["email"] = null;
+        Response.Redirect("~/Login.aspx");
+
+    }
 }

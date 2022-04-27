@@ -1,52 +1,47 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.master" AutoEventWireup="true" CodeFile="Add_Category.aspx.cs" Inherits="Add_Category" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
-
-    <br /><br /><br /><br />
-
-     <div class="container">
-        <div class="form-horizontal">
-            <h2>Add Category</h2>
-            <hr /> 
-            <div class="form-group">
-                <asp:Label ID="Label1" CssClass="col-md-2 control-label" runat="server" Text="Category Name"></asp:Label>
-            <div class="col-md-3">
-                <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" Cssclass ="text-danger" runat="server" ErrorMessage="Please enter category" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
-            </div>
-            </div>
-
-
-
-            <div class="form-group">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-
-                    <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Add Category" OnClick = "Addcategory_Click" />
-                  
-            </div>
-            </div>
-
-
-            <h1>Category</h1>
-         <hr />
-
-         <div class="panel panel-default">
-             <div class="panel-heading">All Categories</div>
-        
-             <asp:Repeater ID="Repeater1" runat="server">
+	<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server"> </asp:Content>
+	<asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
+		<br />
+		<br />
+		<br />
+		<br />
+		<div class="container">
+			<div class="form-horizontal">
+				<h2>Add Category</h2>
+				<hr />
+				<div class="form-group">
+					<asp:Label ID="Label1" CssClass="col-md-2 control-label" runat="server" Text="Category Name"></asp:Label>
+					<div class="col-md-3">
+						<asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"></asp:TextBox>
+						<asp:RequiredFieldValidator ID="RequiredFieldValidator1" Cssclass="text-danger" runat="server" ErrorMessage="Please enter category" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+						<asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Add Category" OnClick="Addcategory_Click" /> </div>
+				</div>
+				<h1>Category</h1>
+				<hr />
+				<h3>All Categories</h3>
+				<div>
+					<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false">
+						<Columns>
+							<asp:BoundField DataField="catid" HeaderText="CatID" />
+							<asp:BoundField DataField="catname" HeaderText="Category Name" /> </Columns>
+					</asp:GridView>
+				</div>
+				<!--  <asp:Repeater ID="Repeater1" runat="server">
              
 
              <HeaderTemplate>
 
-                 <table class="table">
+                 <table class="table1">
                  <thead>
                  <tr>
                      <th>#</th>
                      <th>Category</th>
-                   <!--   <th>Edit</th>  -->
+                    <th>Edit</th>
                  </tr>
                  </thead>
 
@@ -59,6 +54,7 @@
                  <tr>
                          <td><%# Eval("catid")%></td>
                          <td><%# Eval("catname")%></td>
+
                          <td>Edit</td>
                      </tr>
 
@@ -71,20 +67,7 @@
 
               </FooterTemplate>
 
-                 </asp:Repeater>
-
-         </div>
-
-         </div>
-
-
-            </div>
-
-
-
-          
-
-         
-
-</asp:Content>
-
+                 </asp:Repeater> -->
+			</div>
+		</div>
+	</asp:Content>

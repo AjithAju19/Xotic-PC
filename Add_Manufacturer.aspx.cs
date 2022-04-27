@@ -57,7 +57,7 @@ public partial class Add_Manufacturer : System.Web.UI.Page
     }
 
 
-    /*
+    
     private void BindManufacturerRepeater()
     {
         
@@ -73,13 +73,17 @@ public partial class Add_Manufacturer : System.Web.UI.Page
         SqlDataAdapter sda = new SqlDataAdapter(cmd);
         DataTable dt = new DataTable();
         sda.Fill(dt);
-        Repeater1.DataSource = dt;
-        Repeater1.DataBind();
-        
+        //Repeater1.DataSource = dt;
+        //Repeater1.DataBind();
+
+        GridView1.DataSource = dt;
+        GridView1.DataBind();
+
+
 
     }
 
-    */
+    /*
 
     private void BindManufacturerRepeater()
     {
@@ -102,5 +106,7 @@ public partial class Add_Manufacturer : System.Web.UI.Page
         GridView1.DataBind();
 
     }
+
+    */
 
 }

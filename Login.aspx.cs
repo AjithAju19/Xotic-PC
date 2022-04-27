@@ -119,10 +119,6 @@ public partial class Login : System.Web.UI.Page
         TextBox1.Focus();
     }
 
-    protected void ForgotPassword_Click(object sender,EventArgs e)
-    {
-        Response.Redirect("~/Forgot_Password.aspx");
-    }
-
+  
 
 }
