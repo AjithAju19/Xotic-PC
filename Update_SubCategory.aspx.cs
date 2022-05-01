@@ -129,9 +129,16 @@ public partial class Update_SubCategory : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@ID", Convert.ToInt32(txtID.Text));
             cmd.Parameters.AddWithValue("@MCI", ddlMainCategory.SelectedValue);
             cmd.Parameters.AddWithValue("@SCN", txtSubCategory.Text);
-            cmd.ExecuteNonQuery();
+            int n = cmd.ExecuteNonQuery();
             con.Close();
-            Response.Write("<script>alert('Update successfully')</script>");
+            if (n > 0)
+            {
+                Response.Write("<script>alert('Update successfully')</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('Updation failed SubCatID donot match...')</script>");
+            }
             BindGridview();
             txtID.Text = string.Empty;
             ddlMainCategory.SelectedIndex = -1;

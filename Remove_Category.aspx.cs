@@ -9,8 +9,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 
 
-
-public partial class Update_Category : System.Web.UI.Page
+public partial class Remove_Category : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -26,11 +25,11 @@ public partial class Update_Category : System.Web.UI.Page
             Response.Redirect("Login.aspx");
         }
 
+
     }
 
 
-
-    protected void txtID_TextChanged(object sender, EventArgs e)
+    protected void btnRemoveCategory_Click(object sender, EventArgs e)
     {
         string strConnString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
 
@@ -38,53 +37,23 @@ public partial class Update_Category : System.Web.UI.Page
 
         con.Open();
 
-        SqlCommand cmd = new SqlCommand("select catname from Category where catid = @ID", con);
+        SqlCommand cmd = new SqlCommand("delete from Category where catid = @ID", con);
         cmd.Parameters.AddWithValue("@ID", Convert.ToInt32(txtID.Text));
-        SqlDataAdapter da = new SqlDataAdapter(cmd);
-        DataSet ds = new DataSet();
-        DataTable dt = new DataTable();
-        da.Fill(ds, "dt");
-        con.Close();
-        if (ds.Tables[0].Rows.Count > 0)
-        {
-            btnUpdateBrand.Enabled = true;
-            txtUpdateCatName.Text = ds.Tables[0].Rows[0]["catname"].ToString();
 
-        }
-        else
-        {
-            btnUpdateBrand.Enabled = false;
-            txtUpdateCatName.Text = string.Empty;
-        }
-        con.Close();
-    }
-    protected void btnUpdateCategory_Click(object sender, EventArgs e)
-    {
-        string strConnString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
-
-        SqlConnection con = new SqlConnection(strConnString);
-
-        con.Open();
-
-        SqlCommand cmd = new SqlCommand("update Category set catname =@Name where catid=@ID", con);
-        cmd.Parameters.AddWithValue("@ID", Convert.ToInt32(txtID.Text));
-        cmd.Parameters.AddWithValue("@Name", txtUpdateCatName.Text);
         int n = cmd.ExecuteNonQuery();
         con.Close();
         if (n > 0)
         {
-            Response.Write("<script>alert('Updated successfully')</script>");
+            Response.Write("<script>alert('Removed successfully')</script>");
         }
-        else
-        {
-            Response.Write("<script>alert('Updation failed CatID donot match...')</script>");
+        else {
+            Response.Write("<script>alert('Deletion failed CatID donot match...')</script>");
         }
         BindGridview();
-        txtID.Text = string.Empty;
-        txtUpdateCatName.Text = string.Empty;
 
 
     }
+
 
     private void BindGridview()
     {
@@ -110,5 +79,7 @@ public partial class Update_Category : System.Web.UI.Page
             GridView1.DataBind();
         }
     }
+
+
 
 }

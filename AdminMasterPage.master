@@ -41,6 +41,10 @@
 											<li><a href="Update_Manufacturer.aspx">Update Manufacturer</a></li>
 											<li><a href="Update_Category.aspx">Update Category</a></li>
 											<li><a href="Update_SubCategory.aspx">Update Sub Category</a></li>
+											<li role="separator" class="divider "></li>
+											<li><a href="Remove_Manufacturer.aspx">Remove Manufacturer</a></li>
+											<li><a href="Remove_Category.aspx">Remove Category</a></li>
+											<li><a href="Remove_SubCategory.aspx">Remove Sub Category</a></li>
 										</ul>
 									</li>
 									<li><a href="Login.aspx">Log out</a></li>

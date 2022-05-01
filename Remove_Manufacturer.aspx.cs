@@ -8,10 +8,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-public partial class Update_Manufacturer : System.Web.UI.Page
+public partial class Remove_Manufacturer : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+
+
         if (Session["email"] != null)
         {
             if (!IsPostBack)
@@ -24,10 +26,12 @@ public partial class Update_Manufacturer : System.Web.UI.Page
             Response.Redirect("Login.aspx");
         }
 
+
     }
 
 
-    protected void txtID_TextChanged(object sender, EventArgs e)
+
+    protected void btnRemoveManufacturer_Click(object sender, EventArgs e)
     {
         string strConnString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
 
@@ -35,52 +39,20 @@ public partial class Update_Manufacturer : System.Web.UI.Page
 
         con.Open();
 
-        SqlCommand cmd = new SqlCommand("select mname from Manufacturer where mid=@ID", con);
+        SqlCommand cmd = new SqlCommand("delete from Manufacturer where mid = @ID", con);
         cmd.Parameters.AddWithValue("@ID", Convert.ToInt32(txtID.Text));
-        SqlDataAdapter da = new SqlDataAdapter(cmd);
-        DataSet ds = new DataSet();
-        DataTable dt = new DataTable();
-        da.Fill(ds, "dt");
-        con.Close();
-        if (ds.Tables[0].Rows.Count > 0)
-        {
-            btnUpdateBrand.Enabled = true;
-            txtUpdateBrandName.Text = ds.Tables[0].Rows[0]["mname"].ToString();
 
-        }
-        else
-        {
-            btnUpdateBrand.Enabled = false;
-            txtUpdateBrandName.Text = string.Empty;
-        }
-        con.Close();
-    }
-    protected void btnUpdateBrand_Click(object sender, EventArgs e)
-    {
-
-        string strConnString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
-
-        SqlConnection con = new SqlConnection(strConnString);
-
-        con.Open();
-
-        SqlCommand cmd = new SqlCommand("update Manufacturer set mname= (@mname) where mid=@ID", con);
-        cmd.Parameters.AddWithValue("@ID", Convert.ToInt32(txtID.Text));
-        cmd.Parameters.AddWithValue("@mname", txtUpdateBrandName.Text);
         int n = cmd.ExecuteNonQuery();
         con.Close();
         if (n > 0)
         {
-            Response.Write("<script>alert('Updated successfully')</script>");
+            Response.Write("<script>alert('Removed successfully')</script>");
         }
         else
         {
-
-            Response.Write("<script>alert('Updation failed ManufacturerID donot match...')</script>");
+            Response.Write("<script>alert('Deletion failed ManufacturerID donot match...')</script>");
         }
         BindGridview();
-        txtID.Text = string.Empty;
-        txtUpdateBrandName.Text = string.Empty;
 
 
     }
@@ -109,5 +81,6 @@ public partial class Update_Manufacturer : System.Web.UI.Page
             GridView1.DataBind();
         }
     }
+
 
 }
